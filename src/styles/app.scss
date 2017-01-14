@@ -1,0 +1,12 @@
+// Import Foundation utilities
+@import '~foundation-sites/scss/util/util';
+// Load custom Foundation variables
+@import "./settings";
+// Load Foundation
+@import "~foundation-sites/scss/foundation";
+// Initialize Foundation with Flex Grid
+@include foundation-everything(true);
+// Load globally available mixins
+@import "./mixins";
+// Load global styles outside Vue components
+@import "./custom";
