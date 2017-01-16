@@ -1,6 +1,11 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
+// jQuery and Foundation
+// eslint-disable-next-line
+import 'script!jquery';
+import 'script!what-input';
+import 'script!foundation-sites';
 // Vue libraries
 import Vue from 'vue';
 import VueRouter from 'vue-router';
@@ -13,7 +18,7 @@ import Info from './components/Info';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  hashbang: false,
+  mode: 'history',
   history: true,
   linkActiveClass: 'active',
   routes: [
