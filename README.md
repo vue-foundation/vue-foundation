@@ -1,6 +1,6 @@
 # vue-foundation
 
-> Vue.js 2 + Foundation 6 + Webpack 2
+> Vue.js 2 + Foundation 6 + Webpack
 
 ## Build Setup
 

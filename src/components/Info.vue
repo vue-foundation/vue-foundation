@@ -1,15 +1,15 @@
 <template>
-  <div class="hello">
+  <div class="info">
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'info',
   data() {
     return {
-      msg: 'Vue.js + Foundation',
+      msg: 'Another View',
     };
   },
 };
@@ -17,6 +17,6 @@ export default {
 
 <style lang="scss" scoped>
   h1 {
-    color: $secondary-color;
+    color: $primary-color;
   }
 </style>
