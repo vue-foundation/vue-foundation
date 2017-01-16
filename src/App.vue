@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-link to="/">Home</router-link>
+    <router-link to="/home">Home</router-link>
     <router-link to="/info">Info</router-link>
     <router-view></router-view>
   </div>
@@ -19,5 +19,9 @@ export default {
 
   #app {
     @include grid-row();
+  }
+
+  a.active {
+    color: $warning-color;
   }
 </style>
