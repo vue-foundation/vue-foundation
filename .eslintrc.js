@@ -1,5 +1,9 @@
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    jquery: true
+  },
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module'

@@ -2,7 +2,7 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
-var ExtractTextPlugin = require("extract-text-webpack-plugin")
+var webpack = require("webpack");
 
 var env = process.env.NODE_ENV
 // check env & config/index.js to decide whether to enable CSS source maps for the
@@ -84,13 +84,6 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: /\.scss$/,
-        include: [
-          path.join(projectRoot, 'styles')
-        ],
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader", "sass-loader")
       }
     ]
   },
@@ -106,6 +99,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("styles.css")
-  ]
+    new webpack.ProvidePlugin({
+      $: 'jquery', 
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+    })
+  ],
 }

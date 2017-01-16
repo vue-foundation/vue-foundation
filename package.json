@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "foundation-sites": "^6.3.0",
+    "jquery": "^3.1.1",
     "vue": "^2.1.0"
   },
   "devDependencies": {
@@ -45,6 +46,7 @@
     "opn": "^4.0.2",
     "ora": "^0.3.0",
     "sass-loader": "^4.1.1",
+    "script-loader": "^0.7.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.4",
     "style-loader": "^0.13.1",

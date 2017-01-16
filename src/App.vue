@@ -18,7 +18,7 @@ export default {
 
 
 <style lang="scss">  
-  @import "./styles/app"; // Import app.scss in the main app
+  @include foundation-everything(true); // Init Foundation
 
   #app {
     @include grid-row();
