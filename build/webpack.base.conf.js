@@ -72,7 +72,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)(\?.*)?$/,
         loader: 'url',
         query: {
-          limit: 10000,
+          limit: 1000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },
@@ -85,10 +85,10 @@ module.exports = {
       },
       {
         test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
-        loader: 'url?limit=1000',
+        loader: 'url',
         exclude: /node_modules/,
         query: {
-          limit: 10000,
+          limit: 1000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
