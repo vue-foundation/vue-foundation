@@ -77,8 +77,15 @@ module.exports = {
         }
       },
       {
+        test   : /\.css$/,
+        loaders: ['style', 'css', 'resolve-url']
+      }, {
+        test   : /\.scss$/,
+        loaders: ['style', 'css', 'resolve-url', 'sass?sourceMap']
+      },
+      {
         test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
-        loader: 'url',
+        loader: 'url?limit=1000',
         exclude: /node_modules/,
         query: {
           limit: 10000,

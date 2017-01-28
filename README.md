@@ -1,6 +1,6 @@
 # vue-foundation
 
-> Vue.js 2 + Foundation 6 + Webpack
+> Vue.js 2 + Foundation 6 + Webpack + Vue-Router
 
 ## Build Setup
 
@@ -16,3 +16,8 @@ npm run build
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+> Custom features
+
+- Vue-Router configuration
+- Process fonts and images (don't use `static` folder)
