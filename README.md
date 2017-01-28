@@ -20,5 +20,6 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 > Custom features
 
 - Foundation 6, with proper CSS initialization and SASS variables/mixins
+- `v-foundation` directive for proper instantiation of Foundation JS components
 - Vue-Router configuration
 - Process fonts and images (don't use `static` folder)

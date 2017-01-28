@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <div class="reveal" id="exampleModal1" data-reveal>
+    <div class="reveal" id="exampleModal1" v-foundation data-reveal>
       <h1>Awesome. I Have It.</h1>
       <p class="lead">Your couch. It is mine.</p>
       <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
@@ -20,10 +20,6 @@ export default {
     return {
       msg: 'Vue.js + Foundation',
     };
-  },
-  // add this when you need Foundation javascript in the component
-  mounted() {
-    $(this.$el).foundation();
   },
 };
 </script>
