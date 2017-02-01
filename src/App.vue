@@ -16,6 +16,8 @@
           <li><router-link to="/tooltip">Tooltip</router-link></li>
           <li><router-link to="/dropdown-menu">Dropdown Menu</router-link></li>
           <li><router-link to="/accordion-menu">Accordion Menu</router-link></li>
+          <li><router-link to="/magellan">Magellan</router-link></li>
+          <li><router-link to="/accordion">Accordion</router-link></li>
           <li><router-link to="/icons">Icons</router-link></li>
         </ul>
       </div>

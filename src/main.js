@@ -22,6 +22,8 @@ import Tooltip from './components/Tooltip';
 import Icons from './components/Icons';
 import DropdownMenu from './components/DropdownMenu';
 import AccordionMenu from './components/AccordionMenu';
+import Magellan from './components/Magellan';
+import Accordion from './components/Accordion';
 
 // Init Vue-Router
 Vue.use(VueRouter);
@@ -51,6 +53,8 @@ const router = new VueRouter({
     { path: '/tooltip', component: Tooltip },
     { path: '/dropdown-menu', component: DropdownMenu },
     { path: '/accordion-menu', component: AccordionMenu },
+    { path: '/magellan', component: Magellan },
+    { path: '/accordion', component: Accordion },
     { path: '/icons', component: Icons },
   ],
 });
