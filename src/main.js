@@ -15,20 +15,25 @@ import VueRouter from 'vue-router';
 // App
 import App from './App';
 // Components
-import Hello from './components/Hello';
-import Info from './components/Info';
+import Home from './components/Home';
+import Reveal from './components/Reveal';
+import Slider from './components/Slider';
+import Tooltip from './components/Tooltip';
+import Icons from './components/Icons';
+import DropdownMenu from './components/DropdownMenu';
+import AccordionMenu from './components/AccordionMenu';
 
 // Init Vue-Router
 Vue.use(VueRouter);
 
 // Include Foundation JS as a custom directive
-// use: add `v-foundation` to Foundation JavaScript components (i.e. Reveal, Dropdown)
+// use: add `v-foundation` to Foundation JavaScript components (i.e. Reveal, Tooltip)
 Vue.directive('foundation', {
   bind(el) {
     $(el).foundation();
   },
   unbind(el) {
-    $(el).foundation('destroy');
+    $(el).foundation('destroy'); // doesn't work with all components
   },
 });
 
@@ -40,8 +45,13 @@ const router = new VueRouter({
     // redirect / to /home
     { path: '/', redirect: '/home' },
     // routes
-    { path: '/home', component: Hello },
-    { path: '/info', component: Info },
+    { path: '/home', component: Home },
+    { path: '/reveal', component: Reveal },
+    { path: '/slider', component: Slider },
+    { path: '/tooltip', component: Tooltip },
+    { path: '/dropdown-menu', component: DropdownMenu },
+    { path: '/accordion-menu', component: AccordionMenu },
+    { path: '/icons', component: Icons },
   ],
 });
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
     <div class="reveal" id="exampleModal1" v-foundation data-reveal>
       <h1>Awesome. I Have It.</h1>
@@ -15,17 +15,14 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'reveal',
   data() {
     return {
-      msg: 'Vue.js + Foundation',
+      msg: 'Reveal',
     };
   },
 };
 </script>
 
 <style lang="scss" scoped>
-  h1 {
-    color: $secondary-color;
-  }
 </style>
