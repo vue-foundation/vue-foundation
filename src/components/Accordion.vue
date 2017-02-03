@@ -1,11 +1,11 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <ul class="accordion" data-accordion v-foundation>
-      <li class="accordion-item" data-accordion-item>
+    <ul class="accordion" data-accordion>
+      <li class="accordion-item is-active" data-accordion-item>
         <a href="#" class="accordion-title">Accordion 1</a>
         <div class="accordion-content" data-tab-content>
-          Apparently, having an open pane at page load doesn't work.
+          If you init Foundation in the component, this will work fine.
         </div>
       </li>
       <li class="accordion-item" data-accordion-item>
@@ -25,6 +25,12 @@ export default {
     return {
       msg: 'Accordion',
     };
+  },
+  mounted() {
+    $(this.$el).foundation();
+  },
+  unmounted() {
+    $(this.$el).foundation.destroy();
   },
 };
 </script>

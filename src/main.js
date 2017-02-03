@@ -21,9 +21,13 @@ import Slider from './components/Slider';
 import Tooltip from './components/Tooltip';
 import Icons from './components/Icons';
 import DropdownMenu from './components/DropdownMenu';
+import DrilldownMenu from './components/DrilldownMenu';
 import AccordionMenu from './components/AccordionMenu';
 import Magellan from './components/Magellan';
 import Accordion from './components/Accordion';
+import Dropdown from './components/Dropdown';
+import Tabs from './components/Tabs';
+import OffCanvas from './components/OffCanvas';
 
 // Init Vue-Router
 Vue.use(VueRouter);
@@ -35,7 +39,7 @@ Vue.directive('foundation', {
     $(el).foundation();
   },
   unbind(el) {
-    $(el).foundation('destroy'); // doesn't work with all components
+    $(el).foundation('destroy');
   },
 });
 
@@ -52,9 +56,13 @@ const router = new VueRouter({
     { path: '/slider', component: Slider },
     { path: '/tooltip', component: Tooltip },
     { path: '/dropdown-menu', component: DropdownMenu },
+    { path: '/drilldown-menu', component: DrilldownMenu },
     { path: '/accordion-menu', component: AccordionMenu },
     { path: '/magellan', component: Magellan },
     { path: '/accordion', component: Accordion },
+    { path: '/simple-dropdown', component: Dropdown },
+    { path: '/tabs', component: Tabs },
+    { path: '/off-canvas', component: OffCanvas },
     { path: '/icons', component: Icons },
   ],
 });
