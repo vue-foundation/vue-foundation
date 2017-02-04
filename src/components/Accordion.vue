@@ -1,20 +1,22 @@
 <template>
-  <div>
-    <h1>{{ msg }}</h1>
-    <ul class="accordion" data-accordion>
-      <li class="accordion-item is-active" data-accordion-item>
-        <a href="#" class="accordion-title">Accordion 1</a>
-        <div class="accordion-content" data-tab-content>
-          If you init Foundation in the component, this will work fine.
-        </div>
-      </li>
-      <li class="accordion-item" data-accordion-item>
-        <a href="#" class="accordion-title">Accordion 2</a>
-        <div class="accordion-content" data-tab-content>
-          I need to be clicked, in order to show up.
-        </div>
-      </li>
-    </ul>
+  <div class="row">
+    ß<div class="small-12 columns">
+      <h1>{{ msg }}</h1>
+      <ul class="accordion" data-accordion>
+        <li class="accordion-item is-active" data-accordion-item>
+          <a href="#" class="accordion-title">Accordion 1</a>
+          <div class="accordion-content" data-tab-content>
+            If you init Foundation in the component, this will work fine.
+          </div>
+        </li>
+        <li class="accordion-item" data-accordion-item>
+          <a href="#" class="accordion-title">Accordion 2</a>
+          <div class="accordion-content" data-tab-content>
+            I need to be clicked, in order to show up.
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 

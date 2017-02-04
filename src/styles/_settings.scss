@@ -41,8 +41,11 @@
 //  36. Tooltip
 //  37. Top Bar
 
-// [Vue-Foundation] This doesn't work here, Foundation Utils need to be imported BEFORE this file
+// [Vue-Foundation] This doesn't work here
 // @import 'util/util';
+
+// [Vue-Foundation] This does
+@import '~foundation-sites/scss/util/util';
 
 // 1. Global
 // ---------
@@ -51,20 +54,20 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1779ba,
-  secondary: #cc00ff,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #cc4b37,
+  primary: #4fc08d,
+  secondary: #34495e,
+  success: #4fc08d,
+  warning: #FCB738,
+  alert: #DA5961,
 );
-$light-gray: #e6e6e6;
+$light-gray: #f8f8f8;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+$dark-gray: #727f80;
+$black: #2c3e50;
+$white: #ffffff;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Source Sans Pro', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -106,7 +109,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-weight: 300;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
@@ -614,7 +617,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-background: $secondary-color;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;

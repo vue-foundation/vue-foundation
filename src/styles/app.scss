@@ -1,11 +1,7 @@
 // This file gets imported in every component by the scss cssLoader (see build/utils.js)
 // https://github.com/vuejs/vue-loader/issues/328
 
-// Load Foundation utilities
-@import '~foundation-sites/scss/util/util';
 // Load custom Foundation variables
 @import "./settings";
 // Load Foundation
 @import "~foundation-sites/scss/foundation";
-// Load globally available mixins
-@import "./mixins";

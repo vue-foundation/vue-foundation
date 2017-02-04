@@ -1,15 +1,17 @@
 <template>
-  <div>
-    <h1>{{ msg }}</h1>
-    <ul class="horizontal menu" data-magellan>
-      <li><a href="#first">First Arrival</a></li>
-      <li><a href="#second">Second Arrival</a></li>
-      <li><a href="#third">Third Arrival</a></li>
-    </ul>
-    <div class="sections">
-      <section id="first" data-magellan-target="first"><span>First Section</span></section>
-      <section id="second" data-magellan-target="second"><span>Second Section</span></section>
-      <section id="third" data-magellan-target="third"><span>Third Section</span></section>
+  <div class="row">
+    <div class="small-12 columns">
+      <h1>{{ msg }}</h1>
+      <ul class="horizontal menu" data-magellan>
+        <li><a href="#first">First Arrival</a></li>
+        <li><a href="#second">Second Arrival</a></li>
+        <li><a href="#third">Third Arrival</a></li>
+      </ul>
+      <div class="sections">
+        <section id="first" data-magellan-target="first"><span>First Section</span></section>
+        <section id="second" data-magellan-target="second"><span>Second Section</span></section>
+        <section id="third" data-magellan-target="third"><span>Third Section</span></section>
+      </div>
     </div>
   </div>
 </template>

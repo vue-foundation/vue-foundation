@@ -10,8 +10,6 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "foundation-sites": "^6.3.0",
-    "motion-ui": "^1.2.2",
     "vue": "^2.1.0",
     "vue-router": "^2.1.1"
   },
@@ -39,12 +37,14 @@
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "foundation-sites": "^6.3.0",
     "friendly-errors-webpack-plugin": "^1.1.2",
     "function-bind": "^1.0.2",
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.17.2",
     "jquery": "^3.1.1",
     "json-loader": "^0.5.4",
+    "motion-ui": "^1.2.2",
     "node-sass": "^4.3.0",
     "opn": "^4.0.2",
     "ora": "^0.3.0",

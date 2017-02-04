@@ -1,12 +1,14 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>  
-    <div class="slider" data-slider data-initial-start="50" data-end="200">
-      <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
-      <span class="slider-fill" data-slider-fill></span>
-      <input type="hidden" class="slider-input">
+  <div class="row">
+    <div class="small-12 columns">
+      <h1>{{ msg }}</h1>  
+      <div class="slider" data-slider v-bind:data-initial-start="this.dataValue" v-bind:data-end="this.dataEnd">
+        <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+        <span class="slider-fill" data-slider-fill></span>
+        <input type="hidden" class="slider-input">
+      </div>
+      <p>Value: {{ dataValue }}</p>
     </div>
-    <p>Value: {{ dataValue }}</p>
   </div>
 </template>
 
@@ -20,7 +22,8 @@ export default {
   data() {
     return {
       msg: 'Slider',
-      dataValue: 0,
+      dataValue: 50,
+      dataEnd: 200,
     };
   },
   mounted() {

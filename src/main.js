@@ -19,24 +19,10 @@ import Magellan from './components/Magellan';
 import Accordion from './components/Accordion';
 import Dropdown from './components/Dropdown';
 import Tabs from './components/Tabs';
-import OffCanvas from './components/OffCanvas';
 import Orbit from './components/Orbit';
 
 // Init Vue-Router
 Vue.use(VueRouter);
-
-// Include Foundation JS as a custom directive, only when you need it.
-// Add `v-foundation` to Foundation JavaScript components (works with Slider, Tooltip)
-// However, this is buggy and an inferior approach to the mixin (they can't be used together)
-
-// Vue.directive('foundation', {
-//   bind(el) {
-//     $(el).foundation();
-//   },
-//   unbind(el) {
-//     $(el).foundation('destroy');
-//   },
-// });
 
 const router = new VueRouter({
   mode: 'history',
@@ -44,22 +30,21 @@ const router = new VueRouter({
   linkActiveClass: 'active',
   routes: [
     // redirect / to /home
-    { path: '/', redirect: '/home' },
+    { path: '/', redirect: '/vue-foundation/home' },
     // routes
-    { path: '/home', component: Home },
-    { path: '/reveal', component: Reveal },
-    { path: '/slider', component: Slider },
-    { path: '/tooltip', component: Tooltip },
-    { path: '/dropdown-menu', component: DropdownMenu },
-    { path: '/drilldown-menu', component: DrilldownMenu },
-    { path: '/accordion-menu', component: AccordionMenu },
-    { path: '/magellan', component: Magellan },
-    { path: '/accordion', component: Accordion },
-    { path: '/simple-dropdown', component: Dropdown },
-    { path: '/tabs', component: Tabs },
-    { path: '/off-canvas', component: OffCanvas },
-    { path: '/orbit', component: Orbit },
-    { path: '/icons', component: Icons },
+    { path: '/vue-foundation/home', component: Home },
+    { path: '/vue-foundation/reveal', component: Reveal },
+    { path: '/vue-foundation/slider', component: Slider },
+    { path: '/vue-foundation/tooltip', component: Tooltip },
+    { path: '/vue-foundation/dropdown-menu', component: DropdownMenu },
+    { path: '/vue-foundation/drilldown-menu', component: DrilldownMenu },
+    { path: '/vue-foundation/accordion-menu', component: AccordionMenu },
+    { path: '/vue-foundation/magellan', component: Magellan },
+    { path: '/vue-foundation/accordion', component: Accordion },
+    { path: '/vue-foundation/simple-dropdown', component: Dropdown },
+    { path: '/vue-foundation/tabs', component: Tabs },
+    { path: '/vue-foundation/orbit', component: Orbit },
+    { path: '/vue-foundation/icons', component: Icons },
   ],
 });
 
