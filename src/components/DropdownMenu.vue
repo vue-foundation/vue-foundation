@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <ul class="dropdown menu" data-dropdown-menu v-foundation>
+    <ul class="dropdown menu" data-dropdown-menu>
       <li>
         <a href="#">Item 1</a>
         <ul class="menu">
@@ -18,6 +18,10 @@
 
 <script>
 export default {
+  mixins: [
+    // eslint-disable-next-line
+    require('../mixins/foundation'),
+  ],
   name: 'dropdown-menu',
   data() {
     return {

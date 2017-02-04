@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>  
-    <div class="slider" v-foundation data-slider data-initial-start="50" data-end="200">
+    <div class="slider" data-slider data-initial-start="50" data-end="200">
       <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
       <span class="slider-fill" data-slider-fill></span>
       <input type="hidden" class="slider-input">
@@ -12,6 +12,10 @@
 
 <script>
 export default {
+  mixins: [
+    // eslint-disable-next-line
+    require('../mixins/foundation'),
+  ],
   name: 'slider',
   data() {
     return {
@@ -22,7 +26,6 @@ export default {
   mounted() {
     // This is needed: https://github.com/vuejs/vue/issues/372
     $(this.$el).on('moved.zf.slider', () => {
-      // $('.slider-input').triggerHandler('change');
       this.dataValue = $('.slider-input').val();
     });
   },

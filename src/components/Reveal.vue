@@ -15,17 +15,15 @@
 
 <script>
 export default {
+  mixins: [
+    // eslint-disable-next-line
+    require('../mixins/foundation'),
+  ],
   name: 'reveal',
   data() {
     return {
       msg: 'Reveal',
     };
-  },
-  mounted() {
-    $(this.$el).foundation();
-  },
-  unmounted() {
-    $(this.$el).foundation.destroy();
   },
 };
 </script>

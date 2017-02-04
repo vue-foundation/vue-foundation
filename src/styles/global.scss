@@ -2,3 +2,5 @@
 @include foundation-everything(true); 
 // Load icon fonts
 @import './icons';
+// Import Motion UI
+@import '~motion-ui/dist/motion-ui';

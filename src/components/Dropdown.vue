@@ -28,17 +28,15 @@
 
 <script>
 export default {
+  mixins: [
+    // eslint-disable-next-line
+    require('../mixins/foundation'),
+  ],
   name: 'dropdown',
   data() {
     return {
       msg: 'Dropdown',
     };
-  },
-  mounted() {
-    $(this.$el).foundation();
-  },
-  unmounted() {
-    $(this.$el).foundation.destroy();
   },
 };
 </script>

@@ -22,6 +22,7 @@
           <li><router-link to="/simple-dropdown">Dropdown</router-link></li>
           <li><router-link to="/tabs">Tabs</router-link></li>
           <li><router-link to="/off-canvas">Off Canvas</router-link></li>
+          <li><router-link to="/orbit">Orbit</router-link></li>
           <li><router-link to="/icons">Icons</router-link></li>
         </ul>
       </div>

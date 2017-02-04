@@ -25,11 +25,6 @@ export default {
       msg: 'Vue.js 2 + Foundation 6',
     };
   },
-  mounted() {
-    $(this.$el).on('moved.zf.slider', () => {
-      this.dataValue = $('.slider-input').val();
-    });
-  },
 };
 </script>
 

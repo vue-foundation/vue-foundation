@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <ul class="vertical menu" data-accordion-menu v-foundation>
+    <ul class="vertical menu" data-accordion-menu>
       <li>
         <a href="#">Item 1</a>
         <ul class="menu vertical nested">
@@ -16,6 +16,10 @@
 
 <script>
 export default {
+  mixins: [
+    // eslint-disable-next-line
+    require('../mixins/foundation'),
+  ],
   name: 'accordion-menu',
   data() {
     return {

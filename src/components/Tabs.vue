@@ -27,17 +27,15 @@
 
 <script>
 export default {
+  mixins: [
+    // eslint-disable-next-line
+    require('../mixins/foundation'),
+  ],
   name: 'tabs',
   data() {
     return {
       msg: 'Tabs',
     };
-  },
-  mounted() {
-    $(this.$el).foundation();
-  },
-  unmounted() {
-    $(this.$el).foundation.destroy();
   },
 };
 </script>

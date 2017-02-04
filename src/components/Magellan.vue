@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <ul class="horizontal menu" data-magellan v-foundation>
+    <ul class="horizontal menu" data-magellan>
       <li><a href="#first">First Arrival</a></li>
       <li><a href="#second">Second Arrival</a></li>
       <li><a href="#third">Third Arrival</a></li>
@@ -16,6 +16,10 @@
 
 <script>
 export default {
+  mixins: [
+    // eslint-disable-next-line
+    require('../mixins/foundation'),
+  ],
   name: 'magellan',
   data() {
     return {

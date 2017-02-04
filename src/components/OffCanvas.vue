@@ -13,17 +13,15 @@
 
 <script>
 export default {
+  mixins: [
+    // eslint-disable-next-line
+    require('../mixins/foundation'),
+  ],
   name: 'off-canvas',
   data() {
     return {
       msg: 'Off Canvas',
     };
-  },
-  mounted() {
-    $(this.$el).foundation();
-  },
-  unmounted() {
-    $(this.$el).foundation.destroy();
   },
 };
 </script>

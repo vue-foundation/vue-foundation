@@ -20,17 +20,15 @@
 
 <script>
 export default {
+  mixins: [
+    // eslint-disable-next-line
+    require('../mixins/foundation'),
+  ],
   name: 'accordion',
   data() {
     return {
       msg: 'Accordion',
     };
-  },
-  mounted() {
-    $(this.$el).foundation();
-  },
-  unmounted() {
-    $(this.$el).foundation.destroy();
   },
 };
 </script>
