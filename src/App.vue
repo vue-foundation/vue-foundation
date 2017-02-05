@@ -2,36 +2,36 @@
   <div id="app">
     <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
       <ul class="sidebar-menu" data-close="offCanvas">
-        <li><router-link to="/vue-foundation/home">Home</router-link></li>
-        <li><router-link to="/vue-foundation/reveal">Reveal</router-link></li>
-        <li><router-link to="/vue-foundation/slider">Slider</router-link></li>
-        <li><router-link to="/vue-foundation/tooltip">Tooltip</router-link></li>
-        <li><router-link to="/vue-foundation/dropdown-menu">Dropdown Menu</router-link></li>
-        <li><router-link to="/vue-foundation/drilldown-menu">Drilldown Menu</router-link></li>
-        <li><router-link to="/vue-foundation/accordion-menu">Accordion Menu</router-link></li>
-        <li><router-link to="/vue-foundation/magellan">Magellan</router-link></li>
-        <li><router-link to="/vue-foundation/accordion">Accordion</router-link></li>
-        <li><router-link to="/vue-foundation/simple-dropdown">Dropdown</router-link></li>
-        <li><router-link to="/vue-foundation/tabs">Tabs</router-link></li>
-        <li><router-link to="/vue-foundation/orbit">Orbit</router-link></li>
-        <li><router-link to="/vue-foundation/icons">Icons</router-link></li>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/reveal">Reveal</router-link></li>
+        <li><router-link to="/slider">Slider</router-link></li>
+        <li><router-link to="/tooltip">Tooltip</router-link></li>
+        <li><router-link to="/dropdown-menu">Dropdown Menu</router-link></li>
+        <li><router-link to="/drilldown-menu">Drilldown Menu</router-link></li>
+        <li><router-link to="/accordion-menu">Accordion Menu</router-link></li>
+        <li><router-link to="/magellan">Magellan</router-link></li>
+        <li><router-link to="/accordion">Accordion</router-link></li>
+        <li><router-link to="/simple-dropdown">Dropdown</router-link></li>
+        <li><router-link to="/tabs">Tabs</router-link></li>
+        <li><router-link to="/orbit">Orbit</router-link></li>
+        <li><router-link to="/icons">Icons</router-link></li>
       </ul>          
     </div>
     <div class="off-canvas-content" data-off-canvas-content>
       <div class="top-bar">
-        <div class="top-bar-left">
-          <h4 class="logo">
-            <router-link to="/vue-foundation/home">Vue-Foundation</router-link>
-          </h4>
-        </div>
-        <div class="top-bar-right">
-          <ul class="menu show-for-medium">
-            <button type="button" class="button small menu-button" data-toggle="offCanvas">Menu</button>
+        
+          <ul class="menu expanded">
+            <li class="logo">
+              <router-link to="/">Vue-Foundation</router-link>
+            </li>
+            <li><a class="button small menu-button" data-toggle="offCanvas">Menu</button></li>
           </ul>
-        </div>
-
+        
       </div>
-      <router-view></router-view>
+      <div class="content-wrapper">
+        <router-view></router-view>
+      </div>
+    
     </div>
   </div>
 </template>
@@ -62,16 +62,18 @@ export default {
     font-weight: normal;
   }
 
-  .menu-button {
+  li a.menu-button {
     border-radius: 20px;
-    padding-left: 2rem;
-    padding-right: 2rem; 
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; 
     font-weight: 600;
     text-transform: uppercase;
+    display: inline-block;
+    float: right;
   }
 
-  .wrapper {
-    @include flex-grid-row();
+  .content-wrapper {
+    padding: 0.75rem 0;
   }
 
   .sidebar-menu {

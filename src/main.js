@@ -25,26 +25,22 @@ import Orbit from './components/Orbit';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
-  history: true,
   linkActiveClass: 'active',
   routes: [
-    // redirect / to /home
-    { path: '/', redirect: '/vue-foundation/home' },
     // routes
-    { path: '/vue-foundation/home', component: Home },
-    { path: '/vue-foundation/reveal', component: Reveal },
-    { path: '/vue-foundation/slider', component: Slider },
-    { path: '/vue-foundation/tooltip', component: Tooltip },
-    { path: '/vue-foundation/dropdown-menu', component: DropdownMenu },
-    { path: '/vue-foundation/drilldown-menu', component: DrilldownMenu },
-    { path: '/vue-foundation/accordion-menu', component: AccordionMenu },
-    { path: '/vue-foundation/magellan', component: Magellan },
-    { path: '/vue-foundation/accordion', component: Accordion },
-    { path: '/vue-foundation/simple-dropdown', component: Dropdown },
-    { path: '/vue-foundation/tabs', component: Tabs },
-    { path: '/vue-foundation/orbit', component: Orbit },
-    { path: '/vue-foundation/icons', component: Icons },
+    { path: '/', component: Home },
+    { path: '/reveal', component: Reveal },
+    { path: '/slider', component: Slider },
+    { path: '/tooltip', component: Tooltip },
+    { path: '/dropdown-menu', component: DropdownMenu },
+    { path: '/drilldown-menu', component: DrilldownMenu },
+    { path: '/accordion-menu', component: AccordionMenu },
+    { path: '/magellan', component: Magellan },
+    { path: '/accordion', component: Accordion },
+    { path: '/simple-dropdown', component: Dropdown },
+    { path: '/tabs', component: Tabs },
+    { path: '/orbit', component: Orbit },
+    { path: '/icons', component: Icons },
   ],
 });
 

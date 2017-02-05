@@ -5,8 +5,9 @@
     </div>
     <div class="small-12 medium-5 columns">
       <h1>{{ msg }}</h1>  
-      <p>This is a demo integration of Foundation for Sites in a VueJS single-page application. This project shows that, with some adjustments, Foundation can work nicely along Vue.</p>
-      <button type="button" class="button secondary call-button" data-toggle="offCanvas">Explore Components</button>
+      <p>This is a demo integration of Foundation for Sites in a VueJS single-page application. it is meant to show that, with some adjustments, Foundation works nicely along Vue.</p>
+      <a class="button secondary call-button" data-toggle="offCanvas">Components</a>
+      <a class="button secondary hollow call-button" href="https://github.com/hal0gen/vue-foundation">Github</a>
     </div>
   </div>
 </template>
@@ -25,14 +26,14 @@ export default {
 <style lang="scss" scoped>
 
   .image {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
   }
 
   .call-button {
     border-radius: 20px;
-    padding-left: 2rem;
-    padding-right: 2rem; 
+    padding-left: 1.5rem;
+    padding-right: 1.5rem; 
     font-weight: 600;
     text-transform: uppercase;
   }
