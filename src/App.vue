@@ -2,19 +2,18 @@
   <div id="app">
     <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
       <ul class="sidebar-menu" data-close="offCanvas">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/reveal">Reveal</router-link></li>
-        <li><router-link to="/slider">Slider</router-link></li>
-        <li><router-link to="/tooltip">Tooltip</router-link></li>
-        <li><router-link to="/dropdown-menu">Dropdown Menu</router-link></li>
-        <li><router-link to="/drilldown-menu">Drilldown Menu</router-link></li>
-        <li><router-link to="/accordion-menu">Accordion Menu</router-link></li>
-        <li><router-link to="/magellan">Magellan</router-link></li>
-        <li><router-link to="/accordion">Accordion</router-link></li>
-        <li><router-link to="/simple-dropdown">Dropdown</router-link></li>
-        <li><router-link to="/tabs">Tabs</router-link></li>
-        <li><router-link to="/orbit">Orbit</router-link></li>
-        <li><router-link to="/icons">Icons</router-link></li>
+        <li><router-link to="/" exact>Home</router-link></li>
+        <li><router-link to="/reveal" exact>Reveal</router-link></li>
+        <li><router-link to="/slider" exact>Slider</router-link></li>
+        <li><router-link to="/tooltip" exact>Tooltip</router-link></li>
+        <li><router-link to="/dropdown-menu" exact>Dropdown Menu</router-link></li>
+        <li><router-link to="/drilldown-menu" exact>Drilldown Menu</router-link></li>
+        <li><router-link to="/accordion-menu" exact>Accordion Menu</router-link></li>
+        <li><router-link to="/magellan" exact>Magellan</router-link></li>
+        <li><router-link to="/accordion" exact>Accordion</router-link></li>
+        <li><router-link to="/dropdown" exact>Dropdown</router-link></li>
+        <li><router-link to="/tabs" exact>Tabs</router-link></li>
+        <li><router-link to="/orbit" exact>Orbit</router-link></li>
       </ul>          
     </div>
     <div class="off-canvas-content" data-off-canvas-content>
@@ -37,7 +36,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'app',
   mounted() {

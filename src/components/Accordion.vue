@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="small-12 columns">
+    <div class="medium-10 medium-offset-1 columns">
       <h1>{{ msg }}</h1>
       <ul class="accordion" data-accordion>
         <li class="accordion-item is-active" data-accordion-item>

@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="small-12 columns">
+    <div class="medium-10 medium-offset-1 columns">
       <h1>{{ msg }}</h1>
       <ul class="tabs" data-tabs id="deeplinked-tabs">
         <li class="tabs-title is-active"><a href="#panel1d" aria-selected="true">Tab 1</a></li>

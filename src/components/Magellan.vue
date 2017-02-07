@@ -1,11 +1,11 @@
 <template>
   <div class="row">
-    <div class="small-12 columns">
+    <div class="medium-10 medium-offset-1 columns">
       <h1>{{ msg }}</h1>
       <ul class="horizontal menu" data-magellan>
-        <li><a href="#first">First Arrival</a></li>
-        <li><a href="#second">Second Arrival</a></li>
-        <li><a href="#third">Third Arrival</a></li>
+        <li><a href="#first">First</a></li>
+        <li><a href="#second">Second</a></li>
+        <li><a href="#third">Third</a></li>
       </ul>
       <div class="sections">
         <section id="first" data-magellan-target="first"><span>First Section</span></section>

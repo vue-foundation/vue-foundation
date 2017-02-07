@@ -21,12 +21,12 @@ npm run build
 
 CSS setup resides in the `src/styles` folder.
 
-`app.scss` gets imported in every Vue component, through modified `cssLoaders` in `build/utils.js` (thanks to @gazpachu for the idea, see https://github.com/vuejs-templates/webpack/issues/149):
+`app.scss` gets imported in every Vue component, through modified `cssLoaders` in `build/utils.js` (see [vuejs-templates/webpack#149](https://github.com/vuejs-templates/webpack/issues/149)):
 ```js
 return {
     // ...,
-    scss: generateLoaders(['css', 'sass?data=@import "~src/styles/app";']), // 
-    ...,
+    scss: generateLoaders(['css', 'sass?data=@import "~src/styles/app";']), 
+    // ...,
   }
 ```
 As a result, Foundation mixins are now available in Vue components, without the need for an `@import` statement in every style declaration. In order for this to work, every CSS declaration in components needs to use SCSS:
@@ -45,13 +45,13 @@ As a result, Foundation mixins are now available in Vue components, without the 
 
 # Javascript
 
-In order to properly handle Javascript, this project uses a Vue mixin, in `mixins/foundation.js`, which takes care of initializing and destroying Foundation components at the right time. It needs to be included in every `.vue` file using a Foundation JS component. 
+This project uses a Vue mixin, in `mixins/foundation.js`, which takes care of initializing and destroying Foundation components at the right time. It can be included in every `.vue` file using a Foundation JS component, as long as it's not initialized more than once on the same UI element. 
 
 ### Off-Canvas
-As shown in `App.vue`, the component should be directly instantiated using `new Foundation.OffCanvas(element, options)`. This is preferable to using the mixin, as it would initialize Foundation twice on some parts of the DOM.
+As shown in `App.vue`, this component should be directly instantiated using `new Foundation.OffCanvas(element, options)`. This is preferable to using the mixin, as it would initialize Foundation twice on some parts of the DOM.
 
 ### Orbit
 In order to work properly, [Orbit needs the Motion UI library](http://foundation.zurb.com/sites/docs/orbit.html#using-animation).
 
 ### Slider
-This component requires listening to Foundation custom events, setting a `v-model` on the hidden input will not work, as explained here:  https://github.com/vuejs/vue/issues/372
+This component requires listening to Foundation custom events, setting a `v-model` on the hidden input will not work, as explained here: [vuejs/vue#372](https://github.com/vuejs/vue/issues/372) 
