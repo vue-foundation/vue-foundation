@@ -7,21 +7,15 @@
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "5e0a374728ffa8d0ae1f331a8f648231",
-      "css": "github",
-      "code": 61715,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "0ece9a12de796b8411f868d582bee678",
-      "css": "github-squared",
-      "code": 62208,
-      "src": "fontawesome"
-    },
-    {
       "uid": "0f6a2573a7b6df911ed199bb63717e27",
       "css": "github-circled",
       "code": 61595,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5f0f183e241d15cbe486bff88b188dff",
+      "css": "puzzle",
+      "code": 61742,
       "src": "fontawesome"
     }
   ]
