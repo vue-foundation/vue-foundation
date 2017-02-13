@@ -1,16 +1,12 @@
 // Foundation mixin
 
-// eslint-disable-next-line
-import 'script!jquery/dist/jquery.min';
-import 'script!what-input/dist/what-input.min';
-import 'script!foundation-sites/dist/js/foundation.min';
-
-
 module.exports = {
   mounted() {
+    // eslint-disable-next-line
     $(this.$el).foundation();
   },
   unmounted() {
+    // eslint-disable-next-line
     $(this.$el).foundation.destroy();
   },
 };

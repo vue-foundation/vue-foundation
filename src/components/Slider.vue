@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import $ from 'jquery';
+
 export default {
   mixins: [
     // eslint-disable-next-line

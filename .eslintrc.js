@@ -1,12 +1,13 @@
+// http://eslint.org/docs/user-guide/configuring
+
 module.exports = {
   root: true,
-  env: {
-    browser: true,
-    jquery: true
-  },
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module'
+  },
+  env: {
+    browser: true,
   },
   extends: 'airbnb-base',
   // required to lint *.vue files
@@ -28,7 +29,16 @@ module.exports = {
       'js': 'never',
       'vue': 'never'
     }],
+    // allow optionalDependencies
+    'import/no-extraneous-dependencies': ['error', {
+      'optionalDependencies': ['test/unit/index.js']
+    }],
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    // allow import with script-loader in main.js
+    'import/no-webpack-loader-syntax': 0    
   }
 }
+
+
+
