@@ -1,3 +1,4 @@
+
 <template>
   <div class="row">
     <div class="medium-10 medium-offset-1 columns">
@@ -13,7 +14,7 @@
 </template>
 
 <script>
-import $ from 'jquery';
+/* eslint-disable no-undef */
 
 export default {
   mixins: [
