@@ -23,7 +23,7 @@
             <li class="logo">
               <router-link to="/">Vue-Foundation</router-link>
             </li>
-            <li><a class="button small menu-button" data-toggle="offCanvas">Menu</button></li>
+            <li><a class="button small menu-button" data-toggle="offCanvas">Menu</a></li>
           </ul>
         
       </div>
