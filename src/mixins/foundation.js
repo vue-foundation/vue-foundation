@@ -5,7 +5,7 @@ module.exports = {
     // eslint-disable-next-line
     $(this.$el).foundation();
   },
-  unmounted() {
+  destroyed() {
     // eslint-disable-next-line
     $(this.$el).foundation.destroy();
   },
