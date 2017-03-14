@@ -51,7 +51,7 @@ exports.cssLoaders = function (options) {
     includePaths: [
       '~src/styles'
     ],
-    data: '@import "~src/styles/app";'
+    data: '@import "~@/styles/app";'
   }
 
   // http://vuejs.github.io/vue-loader/en/configurations/extract-css.html

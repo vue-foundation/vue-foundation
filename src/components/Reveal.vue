@@ -19,7 +19,7 @@
 export default {
   mixins: [
     // eslint-disable-next-line
-    require('../mixins/foundation'),
+    require('@/mixins/foundation'),
   ],
   name: 'reveal',
   data() {
