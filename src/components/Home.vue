@@ -5,9 +5,9 @@
     </div>
     <div class="small-12 medium-5 columns">
       <h1>{{ msg }}</h1>  
-      <p>This is a demo integration of Foundation for Sites 6.3 in a VueJS 2.1 single-page application.</p>
+      <p>This is a demo integration of Foundation for Sites 6.3 in a VueJS 2.2 single-page application.</p>
       <a class="button secondary call-button" data-toggle="offCanvas"><i class="icon-puzzle"></i>JS Components</a>
-      <a class="button secondary hollow call-button" href="https://github.com/hal0gen/vue-foundation"><i class="icon-github-circled"></i>Source</a>
+      <a class="button secondary hollow call-button" href="https://github.com/vue-foundation/vue-foundation"><i class="icon-github-circled"></i>Source</a>
     </div>
   </div>
 </template>
