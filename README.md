@@ -16,7 +16,7 @@ The master branch is based on a recent vue-cli template, which makes use of Webp
 npm install
 
 # serve with hot reload at localhost:8080
-npm run dev
+npm start
 
 # build for production with minification
 npm run build
