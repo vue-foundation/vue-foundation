@@ -35,8 +35,6 @@ export default {
     };
   },
   destroyed() {
-    // eslint-disable-next-line
-    console.log('destroyed')
     this.accordion.destroy();
   },
 };
