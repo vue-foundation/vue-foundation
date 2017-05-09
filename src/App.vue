@@ -39,7 +39,6 @@
 export default {
   name: 'app',
   mounted() {
-    // eslint-disable-next-line
     this.offCanvas = new Foundation.OffCanvas($('#offCanvas'));
   },
 };
