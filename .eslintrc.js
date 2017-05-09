@@ -37,6 +37,10 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // allow import with script-loader in main.js
     'import/no-webpack-loader-syntax': 0    
+  },
+  globals: {
+    'Foundation': false,
+    '$': false
   }
 }
 
