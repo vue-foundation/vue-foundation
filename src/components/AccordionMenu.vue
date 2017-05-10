@@ -2,7 +2,7 @@
   <div class="row">
     <div class="medium-10 medium-offset-1 columns">
       <h1>{{ msg }}</h1>
-      <ul class="vertical menu" data-accordion-menu>
+      <ul id="accordion-menu" class="vertical menu" data-accordion-menu>
         <li>
           <a>Item 1</a>
           <ul class="menu vertical nested">
@@ -18,15 +18,21 @@
 
 <script>
 export default {
-  mixins: [
-    // eslint-disable-next-line
-    require('@/mixins/foundation'),
-  ],
+  mounted() {
+    this.accordionMenu = new Foundation.AccordionMenu($('#accordion-menu'), {
+      // These options can be declarative using the data attributes
+      slideSpeed: 500,
+      multiOpen: true,
+    });
+  },
   name: 'accordion-menu',
   data() {
     return {
       msg: 'Accordion Menu',
     };
+  },
+  destroyed() {
+    this.accordionMenu.destroy();
   },
 };
 </script>

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="medium-10 medium-offset-1 columns">
       <h1>{{ msg }}</h1>
-      <ul class="dropdown menu" data-dropdown-menu>
+      <ul id="dropdown-menu" class="dropdown menu" data-dropdown-menu>
         <li>
           <a>Item 1</a>
           <ul class="menu">
@@ -20,15 +20,20 @@
 
 <script>
 export default {
-  mixins: [
-    // eslint-disable-next-line
-    require('@/mixins/foundation'),
-  ],
   name: 'dropdown-menu',
+  mounted() {
+    this.dropdownMenu = new Foundation.DropdownMenu($('#dropdown-menu'), {
+      // These options can be declarative using the data attributes
+      hoverDelay: 300,
+    });
+  },
   data() {
     return {
       msg: 'Dropdown Menu',
     };
+  },
+  destroyed() {
+    this.dropdownMenu.destroy();
   },
 };
 </script>

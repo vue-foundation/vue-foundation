@@ -2,7 +2,7 @@
   <div class="row">
     <div class="medium-10 medium-offset-1 columns">
       <h1>{{ msg }}</h1>
-      <ul class="accordion" data-accordion>
+      <ul id="accordion" class="accordion" data-accordion>
         <li class="accordion-item is-active" data-accordion-item>
           <a href="#" class="accordion-title">Accordion 1</a>
           <div class="accordion-content" data-tab-content>
@@ -22,15 +22,21 @@
 
 <script>
 export default {
-  mixins: [
-    // eslint-disable-next-line
-    require('@/mixins/foundation'),
-  ],
   name: 'accordion',
+  mounted() {
+    this.accordion = new Foundation.Accordion($('#accordion'), {
+      // These options can be declarative using the data attributes
+      slideSpeed: 500,
+      multiExpand: true,
+    });
+  },
   data() {
     return {
       msg: 'Accordion',
     };
+  },
+  destroyed() {
+    this.accordion.destroy();
   },
 };
 </script>

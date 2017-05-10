@@ -2,7 +2,7 @@
   <div class="row">
     <div class="medium-10 medium-offset-1 columns">
       <h1>{{ msg }}</h1>
-      <ul class="horizontal menu" data-magellan>
+      <ul id="magellan" class="horizontal menu" data-magellan>
         <li><a href="#first">First</a></li>
         <li><a href="#second">Second</a></li>
         <li><a href="#third">Third</a></li>
@@ -18,15 +18,20 @@
 
 <script>
 export default {
-  mixins: [
-    // eslint-disable-next-line
-    require('@/mixins/foundation'),
-  ],
   name: 'magellan',
+  mounted() {
+    this.magellan = new Foundation.Magellan($('#magellan'), {
+      // These options can be declarative using the data attributes
+      animationEasing: 'swing',
+    });
+  },
   data() {
     return {
       msg: 'Magellan',
     };
+  },
+  destroyed() {
+    this.magellan.destroy();
   },
 };
 </script>
