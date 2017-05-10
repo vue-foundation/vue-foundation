@@ -2,7 +2,7 @@
   <div class="row">
     <div class="medium-10 medium-offset-1 columns">
       <h1>{{ msg }}</h1>
-      <ul class="vertical menu" data-drilldown>
+      <ul id="drilldown" class="vertical menu" data-drilldown>
         <li>
           <a>Item 1</a>
           <ul class="vertical menu">
@@ -18,15 +18,20 @@
 
 <script>
 export default {
-  mixins: [
-    // eslint-disable-next-line
-    require('@/mixins/foundation'),
-  ],
-  name: 'drilldown-menu',
+  name: 'drilldown',
+  mounted() {
+    this.drilldown = new Foundation.Drilldown($('#drilldown'), {
+      // These options can be declarative using the data attributes
+      animationDuration: 500,
+    });
+  },
   data() {
     return {
       msg: 'Drilldown Menu',
     };
+  },
+  destroyed() {
+    this.drilldown.destroy();
   },
 };
 </script>

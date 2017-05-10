@@ -25,6 +25,7 @@ export default {
   name: 'accordion',
   mounted() {
     this.accordion = new Foundation.Accordion($('#accordion'), {
+      // These options can be declarative using the data attributes
       slideSpeed: 500,
       multiExpand: true,
     });

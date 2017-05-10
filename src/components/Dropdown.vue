@@ -2,8 +2,8 @@
   <div class="row">
     <div class="medium-10 medium-offset-1 columns">
       <h1>{{ msg }}</h1>
-      <button class="button" type="button" data-toggle="example-dropdown">Toggle Dropdown</button>
-      <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+      <button class="button" type="button" data-toggle="dropdown1">Toggle Dropdown</button>
+      <div class="dropdown-pane" id="dropdown1" data-dropdown data-auto-focus="true">
         Example form in a dropdown.
         <form>
           <div class="row">
@@ -20,8 +20,8 @@
           </div>
         </form>
       </div>
-      <button class="button" type="button" data-toggle="example-dropdown-1">Hoverable Dropdown</button>
-      <div class="dropdown-pane" id="example-dropdown-1" data-dropdown data-hover="true" data-hover-pane="true">
+      <button class="button" type="button" data-toggle="dropdown2">Hoverable Dropdown</button>
+      <div class="dropdown-pane" id="dropdown2" data-dropdown data-hover="true" data-hover-pane="true">
         v-foundation directive doesn't work here
       </div>
     </div>
@@ -30,15 +30,24 @@
 
 <script>
 export default {
-  mixins: [
-    // eslint-disable-next-line
-    require('@/mixins/foundation'),
-  ],
   name: 'dropdown',
+  mounted() {
+    this.dropdown1 = new Foundation.Dropdown($('#dropdown1'), {
+      // These options can be declarative using the data attributes
+      vOffset: 20,
+    });
+    this.dropdown2 = new Foundation.Dropdown($('#dropdown2'), {
+      hover: true,
+    });
+  },
   data() {
     return {
       msg: 'Dropdown',
     };
+  },
+  destroyed() {
+    this.dropdown1.destroy();
+    this.dropdown2.destroy();
   },
 };
 </script>
