@@ -27,19 +27,26 @@ npm run build
 CSS setup resides in the `src/styles` folder.
 
 `app.scss` gets imported in every Vue component, through modified `cssLoaders` in `build/utils.js` (see [vuejs-templates/webpack#149](https://github.com/vuejs-templates/webpack/issues/149)):
+
 ```js
-return {
-    // ...,
-    scss: generateLoaders(['css', 'sass?data=@import "~src/styles/app";']), 
-    // ...,
+
+let scssOptions = {
+    includePaths: [
+      './src/styles'
+    ],
+    data: '@import "./src/styles/app";'
   }
+
 ```
+
 As a result, Foundation mixins are now available in Vue components, without the need for an `@import` statement in every style declaration. In order for this to work, every CSS declaration in components needs to use SCSS:
 
 ```html
+
 <style lang="scss">
     // styles
 </style>
+
 ```
 
 `_settings.scss` is also imported: this is the original Foundation variables file. The only change required to make it work is the import path of Foundation `util`. 
@@ -48,12 +55,38 @@ As a result, Foundation mixins are now available in Vue components, without the 
 
 `_icons.scss` is a modified Fontello build (all `url`s in `@font-face` declaration). Instead of using the default `static` folder for assets, this project is configured to process fonts and images with custom loaders, in `build/webpack.base.conf.js`.
 
-# Javascript
+# JavaScript
 
-This project uses a Vue mixin, in `mixins/foundation.js`, which takes care of initializing and destroying Foundation components at the right time. It can be included in every `.vue` file using a Foundation JS component, as long as it's not initialized more than once on the same UI element. 
+The `foundation-sites` JavaScript modules are being initialized and destroyed within the [Vue component lifecycle hooks](https://vuejs.org/v2/api/#Options-Lifecycle-Hooks). Specifically the [mounted](https://vuejs.org/v2/api/#mounted) hook is used to initialize each component while the [destroyed](https://vuejs.org/v2/api/#destroyed) hook is used to destroy them.
 
-### Off-Canvas
-As shown in `App.vue`, this component should be directly instantiated using `new Foundation.OffCanvas(element, options)`. This is preferable to using the mixin, as it would initialize Foundation twice on some parts of the DOM.
+There is one exception to this rule; [Tooltips](https://github.com/vue-foundation/vue-foundation/blob/master/src/components/Tooltip.vue) are currently not being destroyed due to a [bug](https://github.com/zurb/foundation-sites/issues/7554) in `foundation-sites`.
+
+You will also notice in the Vue components that a reference is added to the Vue object using `this.component = ...`. This is to allow the destroyed hook to be able to destroy the object without having to use the jQuery selector.
+
+Example from the Accordion component:
+
+```js
+
+export default {
+  name: 'accordion',
+  mounted() {
+    this.accordion = new Foundation.Accordion($('#accordion'), {
+      // These options can be declarative using the data attributes
+      slideSpeed: 500,
+      multiExpand: true,
+    });
+  },
+  data() {
+    return {
+      msg: 'Accordion',
+    };
+  },
+  destroyed() {
+    this.accordion.destroy();
+  },
+};
+
+```
 
 ### Orbit
 In order to work properly, [Orbit needs the Motion UI library](http://foundation.zurb.com/sites/docs/orbit.html#using-animation).
