@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div class="medium-10 medium-offset-1 columns">
+  <div class="grid-container">
+    <div class="x-grid">
       <h1>{{ msg }}</h1>
       <div id="reveal-dialog" class="reveal" data-reveal>
         <h1>Awesome. I Have It.</h1>
