@@ -16,16 +16,22 @@
         <li><router-link to="/orbit" exact>Orbit</router-link></li>
       </ul>          
     </div>
-    <div class="off-canvas-content" data-off-canvas-content>
-      <div class="top-bar">
-        
-          <ul class="menu expanded">
+    <div class="off-canvas-content grid-container full" data-off-canvas-content>
+      <div class="top-bar grid-x">
+        <div class="cell small-6 shrink">
+          <ul class="menu">
             <li class="logo">
               <router-link to="/">Vue-Foundation</router-link>
             </li>
-            <li><a class="button small menu-button" data-toggle="offCanvas">Menu</a></li>
           </ul>
-        
+        </div>
+        <div class="cell small-6 shrink">
+          <ul class="menu expanded">
+            <li>
+              <a class="button small menu-button" data-toggle="offCanvas">Menu</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="content-wrapper">
         <router-view></router-view>
@@ -57,6 +63,11 @@ export default {
   .logo, .logo a {
     color: $white;
     font-weight: normal;
+    background-color: inherit;
+  }
+
+  .top-bar,.top-bar ul {
+    background-color: #41b883;
   }
 
   li a.menu-button {

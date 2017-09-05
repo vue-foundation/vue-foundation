@@ -1,7 +1,7 @@
 
 <template>
-  <div class="row">
-    <div class="medium-10 medium-offset-1 columns">
+  <div class="grid-container">
+    <div class="x-grid">
       <h1>{{ msg }}</h1>  
       <div id="slider" class="slider" data-slider v-bind:data-initial-start="this.dataValue" v-bind:data-end="this.dataEnd">
         <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>

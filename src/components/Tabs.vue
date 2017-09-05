@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div class="medium-10 medium-offset-1 columns">
+  <div class="grid-container">
+    <div class="x-grid">
       <h1>{{ msg }}</h1>
       <ul id="tabs" class="tabs" data-tabs>
         <li class="tabs-title is-active"><a href="#panel1d" aria-selected="true">Tab 1</a></li>

@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div class="medium-10 medium-offset-1 columns">
+  <div class="grid-container">
+    <div class="x-grid">
       <h1>{{ msg }}</h1>
       <button class="button" type="button" data-toggle="dropdown1">Toggle Dropdown</button>
       <div class="dropdown-pane" id="dropdown1" data-dropdown data-auto-focus="true">
