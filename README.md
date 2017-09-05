@@ -93,3 +93,9 @@ In order to work properly, [Orbit needs the Motion UI library](http://foundation
 
 ### Slider
 This component requires listening to Foundation custom events, setting a `v-model` on the hidden input will not work, as explained here: [vuejs/vue#372](https://github.com/vuejs/vue/issues/372) 
+
+## Change Log
+
+_Note: Versions based on the package.json version value_
+
+*   v2.0 [2017-09-05] Upgraded to Foundation 6.4.3 including XY Grid support.
