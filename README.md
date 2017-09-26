@@ -98,4 +98,9 @@ This component requires listening to Foundation custom events, setting a `v-mode
 
 _Note: Versions based on the package.json version value_
 
+<<<<<<< HEAD
 *   v2.0 [2017-09-05] Upgraded to Foundation 6.4.3 including XY Grid support.
+=======
+*   v3.0 [2017-09-26] Replaced single foundation import to plugin import.
+*   v2.0 [2017-09-05] Upgraded to Foundation 6.4.3 including XY Grid support.
+>>>>>>> Foundation64Upgrade
